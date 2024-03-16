@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Job Scraper</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Job Scraper</h1>
+        <!--web-siturile pentru cautare -->
+        <section class="sites">
+            <h2>Select Sites:</h2>
+            <label><input type="radio" name="site" value="indeed"> Indeed</label> 
+            <label><input type="radio" name="site" value="glassdoor"> Glassdoor</label>
+            <label><input type="radio" name="site" value="cvlibrary"> CV-Library</label>
+            <label><input type="radio" name="site" value="govuk"> Gov.uk</label> 
+        </section>
+        <!--cuvintele cheie pentru cautare -->
+        <section class="keywords">
+            <h2>Job Keywords:</h2>
+            <div class="column">
+                <!-- coloana 1 -->
+                <label><input type="checkbox" value="LABOURER"> LABOURER</label>
+                <label><input type="checkbox" value="HANDYMAN"> HANDYMAN</label>
+                <label><input type="checkbox" value="GROUNDWORKER"> GROUNDWORKER</label>
+                <label><input type="checkbox" value="PAINTER"> PAINTER</label>
+                <label><input type="checkbox" value="TILER"> TILER</label>
+                <label><input type="checkbox" value="DRYLINER"> DRYLINER</label>
+                <label><input type="checkbox" value="SLINGER"> SLINGER</label>
+            </div>
+            <div class="column">
+                <!-- coloana 2 -->
+                <label><input type="checkbox" value="360 DRIVER"> 360 DRIVER</label>
+                <label><input type="checkbox" value="DUMPER DRIVER"> DUMPER DRIVER</label>
+                <label><input type="checkbox" value="DIGGER DRIVER"> DIGGER DRIVER</label>
+                <label><input type="checkbox" value="TELEHANDLER"> TELEHANDLER</label>
+                <label><input type="checkbox" value="BRICKLAYER"> BRICKLAYER</label>
+                <label><input type="checkbox" value="PLASTERER"> PLASTERER</label>
+            </div>
+            <div class="column">
+                <!-- coloana 3 -->
+                <label><input type="checkbox" value="CARPENTER"> CARPENTER</label>
+                <label><input type="checkbox" value="WELDER"> WELDER</label>
+                <label><input type="checkbox" value="SHUTTERING"> SHUTTERING</label>
+                <label><input type="checkbox" value="PLUMBER"> PLUMBER</label>
+                <label><input type="checkbox" value="STEEL FIXER"> STEEL FIXER</label>
+                <label><input type="checkbox" value="CLEANER"> CLEANER</label>
+            </div>
+            <!-- camp pentru adaugare manuala cuvinte cheie -->
+            <input type="text" id="customKeywords" placeholder="Type keywords delimited by semicolon (;)">
+        </section>
+        
+        <!--selectarea locatiei-->
+        <section class="location">
+            <h2>Location:</h2>
+            <div class="inputs">
+                <input type="text" id="locationInput" placeholder="Location">
+                <input type="text" id="radiusInput" placeholder="Radius (miles)">
+            </div>
+        </section>        
+        <!--butonul de start si stop -->
+        <div class="buttons">
+            <button id="startButton">Start</button>
+            <button id="stopButton">Stop</button>
+        </div>
+    </div>
+
+    <script src="scripts/popup.js"></script> 
+</body>
+</html>
