@@ -36,11 +36,9 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     startButton.addEventListener('click', function() {
-        // Extract selected website
-        chrome.storage.sync.clear(function() {
-            console.log('Sync storage cleared');
-        });
-        
+        // drop all sync storage
+        chrome.storage.sync.clear();
+        // Extract selected radio button
         const siteRadios = document.getElementsByName('site');
         let selectedSite = null;
         for (const radio of siteRadios) {
@@ -62,7 +60,7 @@ document.addEventListener('DOMContentLoaded', function() {
             .trim()
             .split(';')
             .map(keyword => keyword.trim());
-        
+        // remove empty keywords
         customKeywords = customKeywords.filter(keyword => keyword !== '');
 
         // Combine selected keywords with custom keywords
@@ -88,10 +86,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 links.push(...allKeywords.map(keyword => createGovJobsUrl([keyword], locationInput, radiusInput)));
                 break;
             default:
-                // Handle invalid site selection
+                console.error('Invalid site selected');
+                break;
         }
 
-        // Output the generated links (you can do something more with these links)
+        // save link to storage
         chrome.storage.sync.set({ links: links });
         chrome.storage.sync.set({ status: 'running' });
         chrome.storage.sync.set({ currentLink: 1 });
