@@ -1,13 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
 body {
-    
-    margin: 0 5px;
+    width: 500px;
+    margin: 0;
     padding-bottom: 16px;
     
 } 
 .container {
-    width: 550px;
-    padding:5px;
+    
+    margin:0;
     font-family: "Roboto Mono", monospace;
 }
 
@@ -35,14 +35,15 @@ label {
 }
 
 #customKeywords {
-    padding-right: 10px;
-    width: 500px; 
+    
+    width: 96%; 
 }
 
 .keywords input[type="text"] {
+    
     width: 100%;
     margin-top: 5px;
-    padding: 8px;
+    padding:8px;
     border: 1px solid #ccc;
     font-family: 'Roboto Mono', monospace;
 }
@@ -85,7 +86,7 @@ label {
 }
 
 .keywords {
-    padding-left: 15px;
+    padding:0 15px;
     overflow: hidden;
     margin-top: 0px;
 }
