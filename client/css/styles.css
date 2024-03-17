@@ -2,7 +2,7 @@
 body {
     
     margin: 0 5px;
-    padding-bottom: 5px;
+    padding-bottom: 16px;
     
 } 
 .container {
@@ -14,6 +14,7 @@ body {
 h1 {
     font-weight: bold;
     color: #37B5B6;
+    margin: 10px auto;
 }
 
 h1, h2 {
